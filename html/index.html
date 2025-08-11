@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./../imgs/logo-senku-icon.svg" type="image/x-icon">
+    <title>SENKU Education</title>
+    <link rel="stylesheet" href="./../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="menu-complete">
+        <div class="menu">
+            <a class="logo" href="./../html/index.html">
+                <img class="logo__img" src="./../imgs/logo-senku.svg" alt="Logo de senku education">
+            </a>
+            <i class="menu__icon button__url fa-solid fa-bars"></i>
+            <nav class="menu__navbar">
+                <a class="navbar__a active" href="./../html/index.html"> Inicio </a>
+                <a class="navbar__a" href="./../html/temas.html"> Temas </a>
+                <a class="navbar__a" href="./../html/juegos.html"> Juegos </a>
+                <a class="navbar__a button__url" href="#Descarga"> Descarga </a>
+            </nav>
+        </div>
+    </div>
+
+    <button onclick="scrollToTop()" class="Arrow arrow__returnTop" id="returnTop"
+        title="Volver al inicio de esta página">
+        <object onclick="scrollToTop()" class="arrow___icon" type="image/svg+xml" data="./../imgs/arrow-icon.svg"
+            width="25" height="25">
+            Tu navegador no soporta SVG.
+        </object>
+    </button>
+
+    <button onclick="openModal()" class="Arrow arrow__modal modal__button" id="displayModal"
+        title="Iniciar la encuesta">
+        <object onclick="scrollToTop()" class="arrow___icon" type="image/svg+xml" data="./../imgs/stars-icon.svg"
+            width="25" height="25">
+            Tu navegador no soporta SVG.
+        </object>
+    </button>
+
+    <div class="modal">
+        <div class="modal__content">
+            <span class="modal__close">
+                <i class="fa-solid fa-close"></i>
+            </span>
+            <div class="modal__questions">
+                <h4 class="modal__h4"> ¡ Empecemos ! </h4>
+                <form class="modal__form" action="https://formspree.io/f/xwkdawgr" method="POST">
+                    <!-- Pregunta 1 -->
+                    <div class="modal__fieldset">
+                        <p class="modal__question">
+                            <b class="modal__number-question"> 1 </b>
+                            ¿Cuál es tu grado?
+                        </p>
+                        <input type="radio" name="pregunta1" id="pregunta1_4togrado">
+                        <label for="pregunta1_4togrado">4to grado</label><br>
+                        <input type="radio" name="pregunta1" id="pregunta1_5togrado">
+                        <label for="pregunta1_5togrado">5to grado</label><br><br>
+                    </div>
+                    <!-- Pregunta 2 -->
+                    <div class="modal__fieldset">
+                        <p class="modal__question">
+                            <b class="modal__number-question"> 2 </b>
+                            ¿Qué te parece el curso de física?
+                        </p>
+                        <input type="radio" name="pregunta2" id="pregunta2_facil">
+                        <label for="pregunta2_facil">Fácil</label><br>
+                        <input type="radio" name="pregunta2" id="pregunta2_dificil">
+                        <label for="pregunta2_dificil">Difícil</label><br>
+                        <input type="radio" name="pregunta2" id="pregunta2_aburrido">
+                        <label for="pregunta2_aburrido">Aburrido</label><br><br>
+                    </div>
+                    <!-- Pregunta 3 -->
+                    <div class="modal__fieldset">
+                        <p class="modal__question">
+                            <b class="modal__number-question"> 3 </b>
+                            ¿Cuál de los siguientes temas dominas más?
+                        </p>
+                        <input type="radio" name="pregunta3" id="pregunta3_M.R.U">
+                        <label for="pregunta3_M.R.U">M.R.U</label><br>
+                        <input type="radio" name="pregunta3" id="pregunta3_AnálisisDimensional">
+                        <label for="pregunta3_AnálisisDimensional">Análisis Dimensional</label><br>
+                        <input type="radio" name="pregunta3" id="pregunta3_CaídaLibre">
+                        <label for="pregunta3_CaídaLibre">Caída Libre</label><br>
+                        <input type="radio" name="pregunta3" id="pregunta3_Hidroestática">
+                        <label for="pregunta3_Hidroestática">Hidroestática</label><br>
+                        <input type="radio" name="pregunta3" id="pregunta3_Hidrodinámica">
+                        <label for="pregunta3_Hidrodinámica">Hidrodinámica</label><br><br>
+                    </div>
+                    <!-- Pregunta 4 -->
+                    <div class="modal__fieldset">
+                        <p class="modal__question">
+                            <b class="modal__number-question"> 4 </b>
+                            ¿Qué te parecen las simulaciones de nuestra página web?
+                        </p>
+                        <input type="radio" name="pregunta4" id="pregunta4_bien">
+                        <label for="pregunta4_bien">Bien</label><br>
+                        <input type="radio" name="pregunta4" id="pregunta4_mal">
+                        <label for="pregunta4_mal">Mal</label><br>
+                        <input type="radio" name="pregunta4" id="pregunta4_masomenos">
+                        <label for="pregunta4_masomenos">Más o menos</label><br><br>
+                    </div>
+                    <!-- Pregunta 5 -->
+                    <div class="modal__fieldset">
+                        <p class="modal__question">
+                            <b class="modal__number-question"> 5 </b>
+                            ¿Con qué frecuencia usas herramientas digitales en tus clases de
+                            física?
+                        </p>
+                        <input type="radio" name="pregunta5" id="pregunta5_raravez">
+                        <label for="pregunta5_raravez">Rara vez</label><br>
+                        <input type="radio" name="pregunta5" id="pregunta5_nunca">
+                        <label for="pregunta5_nunca">Nunca</label><br>
+                        <input type="radio" name="pregunta5" id="pregunta5_siempre">
+                        <label for="pregunta5_siempre">Siempre</label><br><br>
+                    </div>
+                    <!-- Pregunta 6 -->
+                    <div class="modal__fieldset">
+                        <p class="modal__question">
+                            <b class="modal__number-question"> 6 </b>
+                            ¿Estás familiarizado con alguna herramienta digital interactiva para el
+                            aprendizaje?
+                        </p>
+                        <input type="radio" name="pregunta6" id="pregunta6_si">
+                        <label for="pregunta6_si">Sí</label> <br>
+                        <input type="radio" name="pregunta6" id="pregunta6_no">
+                        <label for="pregunta6_no">No</label><br><br>
+                    </div>
+                    <!-- Pregunta 7 -->
+                    <div class="modal__fieldset">
+                        <p class="modal__question">
+                            <b class="modal__number-question"> 7 </b>
+                            ¿Crees que el uso de herramientas digitales puede mejorar tu comprensión
+                            de los conceptos de física?
+                        </p>
+                        <input type="radio" name="pregunta7" id="pregunta7_si">
+                        <label for="pregunta7_si">Sí</label> <br>
+                        <input type="radio" name="pregunta7" id="pregunta7_no">
+                        <label for="pregunta7_no">No</label><br><br>
+                    </div>
+                    <!-- Pregunta 8 -->
+                    <div class="modal__fieldset">
+                        <p class="modal__question">
+                            <b class="modal__number-question"> 8 </b>
+                            ¿Has usado alguna vez una herramienta digital interactiva para estudiar
+                            física u otra materia?
+                        </p>
+                        <input type="radio" name="pregunta8" id="pregunta8_si">
+                        <label for="pregunta8_si">Sí</label> <br>
+                        <input type="radio" name="pregunta8" id="pregunta8_no">
+                        <label for="pregunta8_no">No</label><br><br>
+                    </div>
+                    <!-- Pregunta 9 -->
+                    <div class="modal__fieldset">
+                        <p class="modal__question">
+                            <b class="modal__number-question"> 9 </b>
+                            ¿Cuáles son las mayores dificultades que enfrentas actualmente al
+                            estudiar física? (Marca todas las que correspondan)
+                        </p>
+                        <input type="radio" name="pregunta9" id="pregunta9_comprensiondeconceptosteoricos">
+                        <label for="pregunta9_comprensiondeconceptosteoricos">Comprensión de conceptos
+                            teóricos</label><br>
+                        <input type="radio" name="pregunta9" id="pregunta9_aplicaciondeformulas">
+                        <label for="pregunta9_aplicaciondeformulas">Aplicación de fórmulas</label><br>
+                        <input type="radio" name="pregunta9" id="pregunta9_realizaciondeexperimentos">
+                        <label for="pregunta9_realizaciondeexperimentos">Realización de experimentos</label><br>
+                        <input type="radio" name="pregunta9" id="pregunta9_resoluciondeproblemasmatematicos">
+                        <label for="pregunta9_resoluciondeproblemasmatematicos">Resolución de problemas
+                            matemáticos</label><br><br>
+                    </div>
+                    <!-- Pregunta 10 -->
+                    <div class="modal__fieldset">
+                        <p class="modal__question">
+                            <b class="modal__number-question"> 10 </b>
+                            ¿Qué tan satisfecho estás con la enseñanza actual de física en tu
+                            colegio?
+                        </p>
+                        <input type="radio" name="pregunta10" id="pregunta10_satisfecho">
+                        <label for="pregunta10_satisfecho">Satisfecho</label><br>
+                        <input type="radio" name="pregunta10" id="pregunta10_neutral">
+                        <label for="pregunta10_neutral">Neutral</label><br>
+                        <input type="radio" name="pregunta10" id="pregunta10_insatisfecho">
+                        <label for="pregunta10_insatisfecho">Insatisfecho</label><br><br>
+                    </div>
+                    <!-- Pregunta 11 -->
+                    <div class="modal__fieldset">
+                        <p class="modal__question">
+                            <b class="modal__number-question"> 11 </b>
+                            ¿Qué esperas lograr utilizando una herramienta digital interactiva para
+                            aprender física? (Marca todas las que correspondan)
+                        </p>
+                        <input type="radio" name="pregunta11" id="pregunta11_mejorarmiscalificaciones">
+                        <label for="pregunta11_mejorarmiscalificaciones">Mejorar mis calificaciones</label><br>
+                        <input type="radio" name="pregunta11" id="pregunta11_entendermejorlosconceptos">
+                        <label for="pregunta11_entendermejorlosconceptos">Entender mejor los conceptos</label><br>
+                        <input type="radio" name="pregunta11" id="pregunta11_divertirmemientrasaprendo">
+                        <label for="pregunta11_divertirmemientrasaprendo">Divertirme mientras aprendo</label><br>
+                        <input type="radio" name="pregunta11" id="pregunta11_prepararmeparaexámenes">
+                        <label for="pregunta11_prepararmeparaexámenes">Prepararme para exámenes</label><br>
+                        <input type="radio" name="pregunta11" id="pregunta11_participarmásenclase">
+                        <label for="pregunta11_participarmásenclase">Participar más en clase</label><br><br>
+                    </div>
+                    <!-- Pregunta 12 -->
+                    <div class="modal__fieldset">
+                        <img src="./../imgs/senku-education-main.png" alt="Imagen Pregunta 12"><br>
+                        <p class="modal__question">
+                            <b class="modal__number-question"> 12 </b>
+                            ¿Te parece atractiva esta interfaz?
+                        </p>
+                        <input type="radio" name="pregunta12" id="pregunta12_si">
+                        <label for="pregunta12_si">Sí</label><br>
+                        <input type="radio" name="pregunta12" id="pregunta12_no">
+                        <label for="pregunta12_no">No</label><br><br>
+                    </div>
+                    <!-- Pregunta 13 -->
+                    <div class="modal__fieldset">
+                        <p class="modal__question">
+                            <b class="modal__number-question"> 13 </b>
+                            ¿Recomendarías nuestra página a algún compañero?
+                        </p>
+                        <input type="radio" name="pregunta13" id="pregunta13_si">
+                        <label for="pregunta13_si">Sí</label><br>
+                        <input type="radio" name="pregunta13" id="pregunta13_talvez">
+                        <label for="pregunta13_talvez">Tal vez</label><br>
+                        <input type="radio" name="pregunta13" id="pregunta13_no">
+                        <label for="pregunta13_no">No</label><br><br>
+                    </div>
+                    <!-- Pregunta 14 -->
+                    <div class="modal__fieldset">
+                        <p class="modal__question">
+                            <b class="modal__number-question"> 14 </b>
+                            ¿Cuéntame qué resultado deseas obtener con nuestra página web (Senku
+                            Education)?
+                        </p>
+                        <input type="text" name="pregunta14" placeholder="Escribe aquí" maxlength="1000"><br><br>
+                    </div>
+                    <!-- Pregunta 15 -->
+                    <div class="modal__fieldset">
+                        <p class="modal__question">
+                            <b class="modal__number-question"> 15 </b>
+                            ¿Coméntame si hay algún aspecto para mejorar?
+                        </p>
+                        <input type="text" name="pregunta15" placeholder="Escribe aquí" maxlength="1000"><br><br>
+                    </div>
+                    <button class="modal__button-submit" type="submit"> Enviar </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <header class="header-complete">
+        <div class="header container">
+            <div class="header__txt">
+                <h1 class="header__h1"> DEMUESTRA TUS <br> HABILIDADES <span class="header__span-h1">JUGANDO</span>
+                </h1>
+                <p class="header__p"> Somos una plataforma interactiva diseñada
+                    para todos los estudiantes </p>
+            </div>
+            <div class="header__buttons-url">
+                <a href="./../html/juegos.html" class="header__a button__url-border">
+                    Ver los Juegos
+                    <i class="header__i button__url fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="./../html/temas.html" class="header__a button__url-border">
+                    Ver los temas
+                    <i class="header__i button__url fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="estadisticas-complete">
+            <div class="estadisticas container">
+                <div class="estadisticas__txt">
+                    <b class="estadisticas__number"> 05 </b>
+                    <p class="estadisticas__p"> Simulaciones <br> educativas </p>
+                </div>
+                <div class="estadisticas__txt">
+                    <b class="estadisticas__number"> 03 </b>
+                    <p class="estadisticas__p"> Calculadoras <br> interactivas </p>
+                </div>
+                <div class="estadisticas__txt">
+                    <b class="estadisticas__number"> 09 </b>
+                    <p class="estadisticas__p"> Recursos <br> adicionales </p>
+                </div>
+                <div class="estadisticas__txt">
+                    <b class="estadisticas__number"> 16 </b>
+                    <p class="estadisticas__p"> Ecuaciones <br> dimensionales </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="purpose-complete">
+            <div class="purpose-container">
+                <div class="marquee">
+                    <div class="marquee-inner">
+                        <span class="marquee-text"> SENKU EDUCATION </span>
+                        <span class="marquee-text"> SENKU EDUCATION </span>
+                        <span class="marquee-text"> SENKU EDUCATION </span>
+                    </div>
+                </div>
+                <div class="purpose container">
+                    <div class="purpose__card scale-opacity-animate">
+                        <p> Plataformas<br> <span>interactivas</span> </p>
+                        <img src="./../imgs/game-controller-icon.svg" alt="">
+                    </div>
+                    <div class="purpose__card scale-opacity-animate">
+                        <p> Educación para <span>TODOS</span> </p>
+                        <img src="./../imgs/students-icon.svg" alt="">
+                    </div>
+                    <div class="purpose__card scale-opacity-animate">
+                        <p>Aprende <span>Física</span></p>
+                        <img src="./../imgs/birret-icon.svg" alt="">
+                        <ul>
+                            <li><span>+</span> Fácil</li>
+                            <li><span>+</span> Rápido</li>
+                            <li><span>+</span> Divertido</li>
+                        </ul>
+                    </div>
+                    <div class="purpose__card scale-opacity-animate">
+                        <div class="card__txt">
+                            <span class="card__span">1</span>
+                            <b> Teoría </b>
+                            <p> <span>Conoce</span> más sobre los temas </p>
+                        </div>
+                        <div class="card__txt">
+                            <span class="card__span">2</span>
+                            <b> Calculadora </b>
+                            <p> <span>Resuelve</span> diferentes ejercicios </p>
+                        </div>
+                        <div class="card__txt">
+                            <span class="card__span">3</span>
+                            <b> Recursos </b>
+                            <p> <span>Refuerza</span> lo aprendido </p>
+                        </div>
+                        <div class="card__txt">
+                            <span class="card__span">4</span>
+                            <b> Simulaciones </b>
+                            <p> <span>Demuestra</span> lo que sabes </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="purpose__img" src="./../imgs/logo-senku.svg" alt="">
+            <p class="purpose__txt">
+                ¡Descubre una <span>nueva forma de aprender!</span>
+            </p>
+        </div>
+
+        <div class="roadmap-complete">
+            <h1 class="roadmap__h1"> <span>Ruta</span> de estudio </h1>
+            <div class="roadmap-container">
+                <div class="roadmap container">
+                    <div class="roadmap__area">
+                        <h4 class="roadmap__h4"> Movimiento Rectilíneo Uniforme </h4>
+                        <i class="roadmap__course"> Física I </i>
+                        <span class="roadmap__description">
+                            El Movimiento Rectilíneo Uniforme (MRU) es un tipo de movimiento que se da en un sola
+                            dirección o sentido, es decir...
+                            <a class="" href="./../html/temas.html#movimiento-rectilineo-uniforme"> Ver más </a>
+                        </span>
+                        <a class="roadmap__url" href="./../html/juegos.html#cardsContainer">
+                            Ir al juego
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="roadmap__area">
+                        <h4 class="roadmap__h4"> Caída Libre </h4>
+                        <i class="roadmap__course"> Física I </i>
+                        <span class="roadmap__description">
+                            La caída libre es un movimiento en el que se deja caer un objeto desde cierta altura y
+                            mientras cae, no existe ninguna resistencia...
+                            <a class="" href="./../html/temas.html#caida-libre"> Ver más </a>
+                        </span>
+                        <a class="roadmap__url" href="./../html/juegos.html#cardsContainer">
+                            Ir al juego
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="roadmap__area">
+                        <h4 class="roadmap__h4"> Análisis Dimensional </h4>
+                        <i class="roadmap__course"> Física I </i>
+                        <span class="roadmap__description">
+                            El Análisis Dimensional es una herramienta muy usada en distintas ramas de la ciencia y la
+                            ingeniería con la finalidad de ...
+                            <a class="" href="./../html/temas.html#analisis-dimensional"> Ver más </a>
+                        </span>
+                        <a class="roadmap__url" href="./../html/juegos.html#cardsContainer">
+                            Ir al juego
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="roadmap__area">
+                        <h4 class="roadmap__h4"> Hidroestática </h4>
+                        <i class="roadmap__course"> Física I </i>
+                        <span class="roadmap__description">
+                            La hidrostática es la parte fundamental de la fisica que se centra en el estudio de los
+                            fluidos
+                            en reposo y sus propiedades...
+                            <a class="" href="./../html/temas.html#hidroestatica"> Ver más </a>
+                        </span>
+                        <a class="roadmap__url" href="./../html/juegos.html#cardsContainer">
+                            Ir al juego
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="roadmap__area">
+                        <h4 class="roadmap__h4"> Hidrodinámica </h4>
+                        <i class="roadmap__course"> Física I </i>
+                        <span class="roadmap__description">
+                            La hidrodinámica es aquella que estudia el comportamiento del movimiento de los fluidos
+                            considerando su...
+                            <a class="" href="./../html/temas.html#hidrodinamica"> Ver más </a>
+                        </span>
+                        <a class="roadmap__url" href="./../html/juegos.html#cardsContainer">
+                            Ir al juego
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Descarga" class="descarga-complete">
+            <div class="descarga container">
+                <div class="descarga__cards">
+                    <div class="descarga__card scale-opacity-animate">
+                        <p class="card__p"> ¿Qué es </p>
+                        <p class="card__p">SENKU</p>
+                        <p class="card__p">CALCULATOR?</p>
+                    </div>
+                    <div class="descarga__card scale-opacity-animate">
+                        <p class="card__p"> Tu compañero perfecto para resolver problemas de física de manera
+                            <b class="card__b">rápida y eficiente</b>.
+                        </p>
+                        <br>
+                        <p class="card__p"> Con una <b class="card__b">interfaz intuitiva</b> y
+                            <b class="card__b">funciones poderosas</b>, SENKU Calculator te ayuda a dominar
+                            algunos conceptos básicos de la asignatura de Física
+                        </p>
+                    </div>
+                    <div class="descarga__card scale-opacity-animate">
+                        <p> 03 <span class="card__b">Calculadoras</span> interactivas disponibles </p>
+                        <img class="descarga__img" src="./../imgs/senku-calculator-2.png"
+                            alt="Temas de SENKU Calculator">
+                    </div>
+                    <div class="descarga__card scale-opacity-animate">
+                        <p class="descarga__p"> Temas del curso de <span class="descarga__b">Física I</span> </p>
+                        <p class="descarga__p"> Movimiento Rectilíneo Uniforme </p>
+                        <p class="descarga__p"> Caída Libre </p>
+                        <p class="descarga__p"> Análisis Dimensional </p>
+                    </div>
+                    <div class="descarga__card scale-opacity-animate">
+                        <img class="descarga__img" src="./../imgs/senku-calculator-3.png" alt="">
+                        <img class="descarga__img" src="./../imgs/senku-calculator-1.png" alt="">
+                    </div>
+                    <div class="descarga__card scale-opacity-animate">
+                        <p class="card__p">
+                            ¿Cómo descargar <span class="card__b">SENKU Calculator?</span>
+                        </p>
+                        <p class="card__p">
+                            Descargar y descompirmir el archivo <code class="code">Instalador_SENKU_Calculator</code>
+                        </p>
+                        <p class="card__p">
+                            Ingresar en la carpeta <code class="code">Release</code>
+                        </p>
+                        <p class="card__p">
+                            Ejecutar el <code class="code">InstaladorSENKU</code>
+                        </p>
+                    </div>
+                </div>
+                <span class="alert">
+                    <i class="alert__icon fa-solid fa-triangle-exclamation"></i>
+                    No disponible para dispositivos móviles.
+                </span>
+                <a class="descarga__a button__url-border" href="./../Instalador_SENKU_Calculator.zip"
+                    download="Instalador_SENKU_Calculator">
+                    Descargar SENKU Calculator
+                    <i class="header__i button__url fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <section class="contact-complete">
+        <div class="contact container">
+            <div class="contact__information">
+                <h3 class="contact__h3"> Contáctanos </h3>
+                <p> Gracias por visitar la web de <br> SENKU Education, envíanos un mensaje. </p>
+                <div class="socialmedia">
+                    <a href="https://wa.me/924722668?" target="_blank">
+                        <i class="socialmedia__icon socialmedia__icon-circle fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="tel:+51924722668">
+                        <i class="socialmedia__icon socialmedia__icon-circle fa-solid fa-phone-volume"></i>
+                    </a>
+                    <a href="mailto:Senkucalculator@gmail.com">
+                        <i class="socialmedia__icon socialmedia__icon-circle fa-solid fa-envelope"></i>
+                    </a>
+                    <a href="#Ubication">
+                        <i class="socialmedia__icon socialmedia__icon-circle fa-solid fa-location-dot"></i>
+                    </a>
+                </div>
+                <a href="#Ubication">
+                    Ubicación
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+            <form id="my-form" action="https://formspree.io/f/xwkdawgr" method="POST">
+                <input type="text" name="nombres" id="nombres" maxlength="30" oninput="soloLetras(event)"
+                    placeholder="Nombre">
+                <input type="text" name="apellidos" id="apellidos" maxlength="30" oninput="soloLetras(event)"
+                    placeholder="Apellidos">
+                <input type="email" name="email" id="email" placeholder="Correo electrónico">
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                <button class="button__url" type="submit" value="Enviar mensaje" onclick="limpiarTextou()"> Enviar
+                    mensaje </button>
+            </form>
+        </div>
+    </section>
+
+    <section class="iframes-complete" id="Ubication">
+        <h3 class="iframes__h3"> Encuéntranos </h3>
+        <div class="iframes container">
+            <iframe class="iframes__iframe"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3254.727039086013!2d-75.75149457577143!3d-14.044990127735353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9110fd2d2e4a8053%3A0x979e2667ad3f0901!2sUniversidad%20San%20Juan%20Bautista%20-%20Sede%20Ica!5e0!3m2!1ses!2spe!4v1698791466397!5m2!1ses!2spe"
+                width="100%" height="100%" style="background-color: #ffffff90;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="iframes__iframe"
+                src="https://3dwarehouse.sketchup.com/embed/ff0320f6-0c07-4030-861a-621376ec24df?token=CMwLGMa19ds=&binaryName=s21"
+                frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%" height="100%"
+                style="background-color: #ffffff90;" allowfullscreen=""></iframe>
+        </div>
+    </section>
+
+    <footer class="footer-complete">
+        <div class="footer">
+            <p class="footer__txt">
+                SENKU Education &#169; <span id="actualizarCopy"></span> | Todos los derechos reservados
+            </p>
+            <div class="socialmedia">
+                <a href="https://www.tiktok.com/@senkucalculator?is_from_webapp=1&sender_device=pc" target="_blank">
+                    <i class="socialmedia__icon fa-brands fa-tiktok"></i>
+                </a>
+                <a href="https://instagram.com/senku_calculator?igshid=NGVhN2U2NjQ0Yg==" target="_blank">
+                    <i class="socialmedia__icon fa-brands fa-square-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61551761022302" target="_blank">
+                    <i class="socialmedia__icon fa-brands fa-square-facebook"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./../js/index.js"></script>
+
+</body>
+
+</html>

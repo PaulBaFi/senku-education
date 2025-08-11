@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./../imgs/logo-senku-icon.svg" type="image/x-icon">
+    <title>SENKU Education | Temas</title>
+    <link rel="stylesheet" href="./../css/styles.css">
+    <link rel="stylesheet" href="./../css/temas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="menu-complete">
+        <div class="menu">
+            <a class="logo" href="./../html/index.html">
+                <img class="logo__img" src="./../imgs/logo-senku.svg" alt="Logo de senku education">
+            </a>
+            <i class="menu__icon button__url fa-solid fa-bars"></i>
+            <nav class="menu__navbar">
+                <a class="navbar__a" href="./../html/index.html"> Inicio </a>
+                <a class="navbar__a active" href="./../html/temas.html"> Temas </a>
+                <a class="navbar__a" href="./../html/juegos.html"> Juegos </a>
+                <a class="navbar__a button__url" href="#Descarga"> Descarga </a>
+            </nav>
+        </div>
+    </div>
+
+    <button onclick="scrollToTop()" class="Arrow arrow__returnTop" id="returnTop"
+        title="Volver al inicio de esta página">
+        <object onclick="scrollToTop()" class="arrow___icon" type="image/svg+xml" data="./../imgs/arrow-icon.svg"
+            width="25" height="25">
+            Tu navegador no soporta SVG.
+        </object>
+    </button>
+
+    <header class="header-temas-complete">
+        <div class="header-temas container">
+            <h1 class="header-temas__h1"> Temas </h1>
+        </div>
+    </header>
+
+    <main>
+        <div id="movimiento-rectilineo-uniforme" class="buscador-complete">
+            <div class="buscador container">
+                <input class="buscador__input" type="text" id="mySearch" onkeyup="filtrarBusquedas()" maxlength="35"
+                    placeholder="Buscar.." autocomplete="off">
+            </div>
+        </div>
+
+        <div class="sin-resultados-complete">
+            <div class="sin-resultados container" id="mensajeSinResultados">
+                <p class="sin-resultados__p">No se encontraron resultados para su búsqueda.</p>
+                <a class="sin-resultados__a" href="./../html/temas.html">
+                    <span class="sin-resultados__span"> Volver </span>
+                    <i class="sin-resultados__icon fa-solid fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="temas-complete">
+            <div class="temas__main-content container">
+                <div class="Add">
+                    <h4 class="Add__h4"> Anuncios </h4>
+                    <div class="Add__figures">
+                        <figure class="Add_figure">
+                            <img class="Add__img" src="./../imgs/senku-calculator-3.png"
+                                alt="Imagen de SENKU Calculator">
+                            <figcaption class="Add__caption">
+                                <a class="Add__link" href="#Descarga">
+                                    <span class="Add__span"> SENKU Calculator </span>
+                                    <i class="Add__i fa-solid fa-arrow-right"></i>
+                                </a>
+                            </figcaption>
+                        </figure>
+                        <figure class="Add_figure">
+                            <img class="Add__img" src="./../imgs/senku-simualciones-1.png"
+                                alt="Imagen de SENKU Calculator">
+                            <figcaption class="Add__caption">
+                                <a class="Add__link" href="./../html/juegos.html">
+                                    <span class="Add__span"> Juegos SENKU </span>
+                                    <i class="Add__i fa-solid fa-arrow-right"></i>
+                                </a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <ul class="temas" id="TemasContenedor">
+                    <li id="caida-libre" class="temas__li">
+                        <details class="temas__tema">
+                            <summary class="tema__encabezado">
+                                <p> Movimiento Rectilíneo Uniforme </p>
+                                <i class="tema__icon fa-solid fa-caret-down"></i>
+                            </summary>
+                            <div class="temas__informacion">
+                                <p class="temas__desc-p"> El <b> Movimiento Rectilíneo Uniforme (MRU) </b> es un
+                                    tipo de movimiento que se da en un sola dirección o sentido, es decir en línea
+                                    recta y a una velocidad constante. Esto significa que recorre distancias iguales
+                                    en tiempos iguales.
+                                </p>
+                                <b class="temas__desc-p"> Atributos del movimiento rectilíneo uniforme </b>
+                                <p class="temas__desc-p">
+                                    <b> • Movimiento recto: </b> El movimiento siempre transcurre a lo largo de una
+                                    línea recta.
+                                    <br>
+                                    <b> • Constante: </b> Un móvil con MRU recorre distancias o espacios iguales en
+                                    tiempos iguales.
+                                    <br>
+                                    <b> • Velocidad: </b> La velocidad permanece inalterable tanto en magnitud como en
+                                    dirección y sentido.
+                                    <br>
+                                    <b> • No hay aceleración: </b> El MRU carece de aceleración (no hay cambios en la
+                                    velocidad).
+                                    <br>
+                                    <b> • Línea recta: </b> Puesto que la velocidad `v` se mantiene constante en el
+                                    tiempo
+                                    `t`, la gráfica de su magnitud en función del tiempo es una línea recta.
+                                </p>
+                                <b class="temas__desc-p">
+                                    Fórmulas:
+                                </b>
+                                <p class="temas__desc-p">
+                                    Fórmula para hallar la <b> distancia: </b>
+                                <p class="temas__math"> `d = v * t` </p>
+                                </p>
+                                <p class="temas__desc-p">
+                                    Fórmula para hallar la <b> velocidad: </b>
+                                <p class="temas__math"> `v = d / t` </p>
+                                </p>
+                                <p class="temas__desc-p">
+                                    Fórmula para hallar el <b> tiempo: </b>
+                                <p class="temas__math"> `t = d / v` </p>
+                                </p>
+                                <i class="temas__desc-i"> Donde <br>
+                                    • `d` es la distancia o desplazamiento que recorrió el cuerpo `(m)`
+                                    • `v` es la velocidad constante `(m/s)`
+                                    • `t` es el tiempo que tardo el cuerpo al realizar todo el recorrido `(s)`
+                                </i>
+                            </div>
+                        </details>
+                    </li>
+                    <li id="analisis-dimensional" class="temas__li">
+                        <details class="temas__tema">
+                            <summary class="tema__encabezado">
+                                <p> Caída libre </p>
+                                <i class="tema__icon fa-solid fa-caret-down"></i>
+                            </summary>
+                            <div class="temas__informacion">
+                                <p class="temas__desc-p"> La <b> caída libre </b> es un movimiento en el que se deja
+                                    caer un objeto desde cierta altura y mientras cae, no existe ninguna resistencia que
+                                    se aparezca en su camino para interrumpirlo. En la caída libre no se tiene en cuenta
+                                    la resistencia del aire.
+                                </p>
+                                <p class="temas__desc-p"> A continuación se presentan las <b> leyes
+                                        fundamentales de la caída libre </b>:
+                                </p>
+                                <p class="temas__desc-p">
+                                    • Todo cuerpo que cae libremente tiene una trayectoria vertical. <br>
+                                    • La caída de los cuerpos es un movimiento uniformemente acelerado. <br>
+                                    • Todos los cuerpos caen con la misma aceleración.
+                                </p>
+                                <b> Formulas </b>
+                                <b class="temas__desc-p"> • Fórmulas para hallar la altura </b>
+                                <p class="temas__math"> `-h = V_0 * t + 1/2 * g * t^2` </p>
+                                <p class="temas__math"> `-h = V_f * t - 1/2 * g * t^2` </p>
+                                <p class="temas__math"> `-h = (V_0 - V_f) / (2) * t` </p>
+                                <p class="temas__math"> `-h = (v_f^2 - v_0^2) / (2 * g)` </p>
+                                <b class="temas__desc-p"> • Fórmulas para hallar la velocidad inicial </b>
+                                <p class="temas__math"> `-V_0 = V_f - g * t` </p>
+                                <p class="temas__math"> `-V_0 = 2 * h / t - V_f` </p>
+                                <b class="temas__desc-p"> • Fórmulas para hallar la velocidad final </b>
+                                <p class="temas__math"> `-V_f = V_-0 + g * t` </p>
+                                <p class="temas__math"> `-V_f = 2 * h / t - V_0` </p>
+                                <p class="temas__math"> `-V_f = sqrt{V_0^2 + 2 * g * h}` </p>
+                                <b class="temas__desc-p"> • Fórmulas para hallar el tiempo </b>
+                                <p class="temas__math"> `-t = (V_f - V_0) / (g)` </p>
+                                <p class="temas__math"> `-t = (2 * h) / (V_0 + V_f)` </p>
+                                <b class="temas__desc-p"> • Fórmulas para hallar la gravedad </b>
+                                <p class="temas__math"> `-g = (V_f - V_0) / g - V_0 ` </p>
+                                <p class="temas__math"> `-g = (V_f^2 - V_0^2) / (2 * h) - V_0` </p>
+                                <i class="temas__desc-i"> Donde: <br>
+                                    • `h` es la altura recorrida por el cuerpo `(m)` <br>
+                                    • `V_0` es la velocidad inicial, velocidad con la que un cuerpo parte del punto
+                                    inicial del movimiento `(m//s)` <br>
+                                    • `V_f` es la velocidad final, es la velocidad al final del movimiento `(m//s)` <br>
+                                    • `t` es el tiempo recorrido que un cuerpo tarda en caer `(s)` <br>
+                                    • `g` es la gravedad constante o aceleración `(m//s^2)`
+                                </i>
+                            </div>
+                        </details>
+                    </li>
+                    <li id="hidroestatica" class="temas__li">
+                        <details class="temas__tema">
+                            <summary class="tema__encabezado">
+                                <p> Análisis Dimensional </p>
+                                <i class="tema__icon fa-solid fa-caret-down"></i>
+                            </summary>
+                            <div class="temas__informacion">
+                                <p class="temas__desc-p"> <b> Análisis Dimensional </b> es una herramienta muy usada en
+                                    distintas ramas de la ciencia y la ingeniería con la finalidad de entender mejor los
+                                    fenómenos que implican la presencia de diferentes magnitudes físicas. Las magnitudes
+                                    tienen dimensiones y estas se derivan de distintas unidades de medida. Las fórmulas
+                                    dimensionalmente básicas son las siguiente.
+                                </p>
+                                <b> Geometría • Área </b>
+                                <p class="temas__math"> `S = L^2` `(m^2)` </p>
+                                <i class="temas__desc-i"> `S` : Área del cuadrado </i> <br>
+                                <i class="temas__desc-i"> `L` : Longitud de un lado del cuadrado </i>
+                                <br><br>
+                                <b> Geometría • Volumen </b>
+                                <p class="temas__math"> `s = L^3` `(m^3)` </p>
+                                <i class="temas__desc-i"> `V` : Volumen de un cubo </i><br>
+                                <i class="temas__desc-i"> `L` : Longitud de una arista del cubo </i>
+                                <br><br>
+                                <b> Geometría • Ángulo del plano </b>
+                                <p class="temas__math"> `s = theta R` `(rad)` </p>
+                                <i class="temas__desc-i"> `s` : Longitud de un arco de circunferencia </i><br>
+                                <i class="temas__desc-i"> `theta`: Ángulo plano que abarca el arco desde su centro
+                                </i><br>
+                                <i class="temas__desc-i"> `R` : Radio de la circunferencia </i>
+                                <br><br>
+                                <b> Geometría • Ángulo sólido </b>
+                                <p class="temas__math"> `S = Omega R^2` `(rad)` </p>
+                                <i class="temas__desc-i"> `S` : Área de una porción de la superficie esférica </i><br>
+                                <i class="temas__desc-i"> `Omega` : Ángulo sólido que abarca la porción desde su centro
+                                </i><br>
+                                <i class="temas__desc-i"> `R` : Radio de la esfera </i>
+                                <br><br>
+                                <b> Cinemática • Velocidad </b>
+                                <p class="temas__math"> `v = (Delta s) // (Delta t)` `(ms//s)` </p>
+                                <i class="temas__desc-i"> `Delta s` : Espacio recorido por la partícula en un intervalo
+                                    de tiempo dado </i><br>
+                                <i class="temas__desc-i"> `Delta t` : Intervalo de tiempo </i>
+                                <br><br>
+                                <b> Cinemática • Aceleración </b>
+                                <p class="temas__math"> `alpha = Delta v // Delta t ` `(ms//s^2)` </p>
+                                <p class="temas__desc-i"> `alpha` : Módulo de la aceleración media de una partícula en
+                                    movimiento rectilíneo </p>
+                                <i class="temas__desc-i"> `Delta v` : Incremento del módulo de la velocidad de la
+                                    partícula en un intervalo de tiempo dado </i><br>
+                                <i class="temas__desc-i"> `Delta t` : Intervalo de tiempo </i>
+                                <br><br>
+                                <b> Cinemática • Velocidad angular </b>
+                                <p class="temas__math"> `Omega = Delta theta // Delta t ` `(rad//s)` </p>
+                                <p class="temas__desc-i"> `Omega` : Módulo de la velocidad angular media de una
+                                    partícula en movimiento circular </p>
+                                <i class="temas__desc-i"> `Delta theta` : Ángulo girado por la partícula en un intervalo
+                                    de tiempo dado </i><br>
+                                <i class="temas__desc-i"> `Delta t` : Intervalo de tiempo </i>
+                                <br><br>
+                                <b> Cinemática • Aceleración angular </b>
+                                <p class="temas__math"> `alpha = Delta Omega // Delta t ` `(rad//s^2)` </p>
+                                <p class="temas__desc-i"> `alpha` : Módulo de la aceleración angular media de una
+                                    partícula en movimiento circular </p>
+                                <i class="temas__desc-i"> `Delta Omega` : Incremento del módulo de la velocidad angular
+                                    de la partícula en un intervalo </i><br>
+                                <i class="temas__desc-i"> `Delta t` : Intervalo de tiempo </i>
+                                <br><br>
+                                <b> Cinemática • Velocidad aerolar </b>
+                                <p class="temas__math"> `v = Delta S // Delta t ` `(m//s^2)` </p>
+                                <p class="temas__desc-i"> `v` : Velocidad aerolar media de una partícula respecto a un
+                                    punto </p>
+                                <i class="temas__desc-i"> `Delta S` : Área de la superficie barrida por la partícula
+                                </i><br>
+                                <i class="temas__desc-i"> `Delta t` : Intervalo de tiempo </i>
+                                <br><br>
+                                <b> Proporciones • Densidad de la masa </b>
+                                <p class="temas__math"> `rho = m // V` `(kg//m^3)` </p>
+                                <p class="temas__desc-i"> `rho` : Densidad de la masa </p>
+                                <i class="temas__desc-i"> `m` : Masa </i><br>
+                                <i class="temas__desc-i"> `V` : Volumen </i>
+                                <br><br>
+                                <b> Proporciones • Densidad lineal de la masa </b>
+                                <p class="temas__math"> `lambda = m // L` `(kg//m)` </p>
+                                <p class="temas__desc-i"> `lambda` : Densidad lineal de la masa </p>
+                                <i class="temas__desc-i"> `m` : Masa </i><br>
+                                <i class="temas__desc-i"> `L` : Longitud </i>
+                                <br><br>
+                                <b> Proporciones • Densidad superficial de masa </b>
+                                <p class="temas__math"> `sigma = m // S` `(kg//m^2)` </p>
+                                <p class="temas__desc-i"> `sigma` : Densidad superficial de la masa </p>
+                                <i class="temas__desc-i"> `m` : Masa </i><br>
+                                <i class="temas__desc-i"> `S` : Área de la superficie </i>
+                                <br><br>
+                                <b> Proporciones • Peso específico </b>
+                                <p class="temas__math"> `gamma = P // V` `(N//m^3)` </p>
+                                <p class="temas__desc-i"> `gamma` : Módulo del peso específico medio </p>
+                                <i class="temas__desc-i"> `P` : Módulo del peso (Fuerzo debida a la gravedad) </i><br>
+                                <i class="temas__desc-i"> `V` : Volumen </i>
+                                <br><br>
+                                <b> Proporciones • Volumen específico </b>
+                                <p class="temas__math"> `v = P // V` `(m^3//kg)` </p>
+                                <p class="temas__desc-i"> `v` : Volumen específico medio </p>
+                                <i class="temas__desc-i"> `V` : Volumen </i><br>
+                                <i class="temas__desc-i"> `m` : Masa </i>
+                                <br><br>
+                                <b> Proporciones • Concentración </b>
+                                <p class="temas__math"> `c = n // V` `(molar)` </p>
+                                <p class="temas__desc-i"> `c` : Concentración media de una disolución </p>
+                                <i class="temas__desc-i"> `n` : Cantidad de sustancia de soluto </i><br>
+                                <i class="temas__desc-i"> `V` : Volumen de disolución </i>
+                                <br><br>
+                                <b> Proporciones • Número de Avogadro </b>
+                                <p class="temas__math"> `N_"a" = N // n` `(mol^-1)` </p>
+                                <p class="temas__desc-i"> `N_"a"` : Número de avogrado </p>
+                                <i class="temas__desc-i"> `N` : Número de entidades elementades de una sustancia
+                                </i><br>
+                                <i class="temas__desc-i"> `n` : Cantidad de sustancia </i>
+                            </div>
+                        </details>
+                    </li>
+                    <li id="hidrodinamica" class="temas__li">
+                        <details class="temas__tema">
+                            <summary class="tema__encabezado">
+                                <p> Hidroestática </p>
+                                <i class="tema__icon fa-solid fa-caret-down"></i>
+                            </summary>
+                            <div class="temas__informacion">
+                                <p class="temas__desc-p"> La <b> hidrostática </b> es la parte fundamental de la fisica
+                                    que se centra en el estudio de los fluidos en reposo y sus propiedades. Los fluidos
+                                    incluyen tanto gases como líquidos y la hidrostatica se enfoca principalmente en los
+                                    liquidos. <br>
+                                <p class="temas__desc-p"> La <b> densidad </b> de una sustancia es una propiedad
+                                    caracteristica de estas que se define como la cantidad de masa que posee por
+                                    unidad de volumen. Se expresa de la siguiente forma: </p>
+                                <p class="temas__math"> `rho = m / v ((kg) / m^3)` </p>
+                                <i class="temas__desc-i"> Donde m es la masa del objeto y v es el volumen del mismo.
+                                </i>
+                                <br><br>
+                                <p class="temas__desc-p"> La <b> presion </b> es una magnitud que mide el efecto
+                                    deformador o capacidad de penetracion de una fuerza y se define como la
+                                    cantidad de fuerza aplicada por unidad de superficie. Se expresa como: </p>
+                                <p class="temas__math"> `p = F / A (N / m^2) = 1Pa` </p>
+                                <i class="temas__desc-i"> Donde F es la fuerza y A es el área </i>
+                                <br><br>
+                                <p class="temas__desc-p"> La <b> presión hidrostática </b> se refiere a la presion que
+                                    ejerce un líquido en reposo sobre cualquier objeto sumergido en el. Se
+                                    expresa de la siguiente manera: </p>
+                                <p class="temas__math"> `P_"H" = rho * g * h (Pa)` </p>
+                                <i class="temas__desc-i"> Donde: <br>
+                                    `rho =`es la densidad del líquido `(kg // m^(3))` <br>
+                                    `g =`es la gravedad `(m // seg^2)` <br>
+                                    `h =`es la profundidad `(m)` </i>
+                                <br><br>
+                                <p class="temas__desc-p"> La <b> Presión atmosférica </b> es la presion que ejercen los
+                                    gases de la atmósfera sobre cualquier cuerpo que se encuentre inmerso en
+                                    ella. </p>
+                                <i class="temas__math"> `P_"atm" = P_0 = 10^5Pa = 760 mmhg = 1atm`
+                                </i>
+                                <br><br>
+                                <p class="temas__desc-p"> La <b> Presión total o absoluta </b> es la suma de las
+                                    presiones que diversas sustancias ejercen sobre un punto o nivel que lo contiene. Se
+                                    expresa como:
+                                </p>
+                                <i class="temas__math"> `P_"total" = P_"H" + P_"atm"`
+                                </i> <br><br>
+                                <i class="temas__desc-i"> Donde `P_"H"` es la presion hidrostatica y
+                                    `P_"atm"` es la presion atmosférica: </i>
+                            </div>
+                        </details>
+                    </li>
+                    <li class="temas__li">
+                        <details class="temas__tema">
+                            <summary class="tema__encabezado">
+                                <p> Hidrodinámica </p>
+                                <i class="tema__icon fa-solid fa-caret-down"></i>
+                            </summary>
+                            <div class="temas__informacion">
+                                <p class="temas__desc-p"> La <b> hidrodinámica </b> es aquella que estudia el
+                                    comportamiento del movimiento de los fluidos considerando su velocidad, presión,
+                                    flujo y gasto.
+                                </p>
+                                <p class="temas__desc-p"> Los elementos principales de la hidrodinámica son: la
+                                    propiedad de los fluidos, la velocidad de flujo, la presión, viscosidad y fricción.
+                                </p>
+                                <p class="temas__desc-p"> Otros conceptos que también se trabajan en esta rama son: </p>
+                                <p class="temas__desc-p"> El <b> gasto o caudal </b> es aquella relación que hay entre
+                                    el volumen del líquido que fluye por un conducto y el tiempo que tarda en fluir; y
+                                    se halla de la siguiente forma: </p>
+                                <p class="temas__math"> `"Gastos" = (Volumen) / (Tiempo)` </p>
+                                <p class="temas__desc-p"> Cabe resaltar que otra manera para hallar el gasto o caudal es
+                                    multiplicando el área de la sección transversal de la tubería por la velocidad del
+                                    líquido: </p>
+                                <p class="temas__math"> `"Gastos" = A * v` </p>
+                                <p class="temas__desc-p"> El <b> flujo </b> es la cantidad de masa de líquido que fluye
+                                    a través de una tubería en un segundo; y se halla de la siguiente forma: </p>
+                                <p class="temas__math"> `"Flujo" = (masa) / (tiempo)` </p>
+                                <p class="temas__desc-p"> La <b> Ley de Torricelli </b> se aplica cuando un recipiente
+                                    que no se encuentra tapado y se le abre un orificio, la velocidad con que caerá ese
+                                    fluido será; y se halla de la siguiente forma: </p>
+                                <p class="temas__math"> `"v = sqrt{2 * g * h}` </p>
+                            </div>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="Descarga" class="descarga-complete">
+            <div class="descarga container">
+                <div class="descarga__cards">
+                    <div class="descarga__card">
+                        <p class="card__p"> ¿Qué es </p>
+                        <p class="card__p">SENKU</p>
+                        <p class="card__p">CALCULATOR?</p>
+                    </div>
+                    <div class="descarga__card">
+                        <p class="card__p"> Tu compañero perfecto para resolver problemas de física de manera
+                            <b class="card__b">rápida y eficiente</b>.
+                        </p>
+                        <br>
+                        <p class="card__p"> Con una <b class="card__b">interfaz intuitiva</b> y
+                            <b class="card__b">funciones poderosas</b>, SENKU Calculator te ayuda a dominar
+                            algunos conceptos básicos de la asignatura de Física
+                        </p>
+                    </div>
+                    <div class="descarga__card">
+                        <p> 03 <span class="card__b">Calculadoras</span> interactivas disponibles </p>
+                        <img class="descarga__img" src="./../imgs/senku-calculator-2.png"
+                            alt="Temas de SENKU Calculator">
+                    </div>
+                    <div class="descarga__card">
+                        <p class="descarga__p"> Temas del curso de <span class="descarga__b">Física I</span> </p>
+                        <p class="descarga__p"> Movimiento Rectilíneo Uniforme </p>
+                        <p class="descarga__p"> Caída Libre </p>
+                        <p class="descarga__p"> Análisis Dimensional </p>
+                    </div>
+                    <div class="descarga__card">
+                        <img class="descarga__img" src="./../imgs/senku-calculator-3.png" alt="">
+                        <img class="descarga__img" src="./../imgs/senku-calculator-1.png" alt="">
+                    </div>
+                    <div class="descarga__card">
+                        <p class="card__p">
+                            ¿Cómo descargar <span class="card__b">SENKU Calculator?</span>
+                        </p>
+                        <p class="card__p">
+                            Descargar y descompirmir el archivo <code class="code">Instalador_SENKU_Calculator</code>
+                        </p>
+                        <p class="card__p">
+                            Ingresar en la carpeta <code class="code">Release</code>
+                        </p>
+                        <p class="card__p">
+                            Ejecutar el <code class="code">InstaladorSENKU</code>
+                        </p>
+                    </div>
+                </div>
+                <span class="alert">
+                    <i class="alert__icon fa-solid fa-triangle-exclamation"></i>
+                    No disponible para dispositivos móviles.
+                </span>
+                <a class="descarga__a button__url-border" href="./../Instalador_SENKU_Calculator.zip"
+                    download="Instalador_SENKU_Calculator">
+                    Descargar SENKU Calculator
+                    <i class="header__i button__url fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-complete">
+        <div class="footer">
+            <p class="footer__txt">
+                SENKU Education &#169; <span id="actualizarCopy"></span> | Todos los derechos reservados
+            </p>
+            <div class="socialmedia">
+                <a href="https://www.tiktok.com/@senkucalculator?is_from_webapp=1&sender_device=pc" target="_blank">
+                    <i class="socialmedia__icon fa-brands fa-tiktok"></i>
+                </a>
+                <a href="https://instagram.com/senku_calculator?igshid=NGVhN2U2NjQ0Yg==" target="_blank">
+                    <i class="socialmedia__icon fa-brands fa-square-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61551761022302" target="_blank">
+                    <i class="socialmedia__icon fa-brands fa-square-facebook"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script referer src="./../js/index.js"></script>
+    <!-- Renderizar las operaciones matemáticas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+    <script src="ASCIIMathML.js"></script>
+
+</body>
+
+</html>

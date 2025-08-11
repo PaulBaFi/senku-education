@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./../imgs/logo-senku-icon.svg" type="image/x-icon">
+    <title> SENKU Education </title>
+    <link rel="stylesheet" href="./../css/styles.css">
+    <link rel="stylesheet" href="./../css/juegos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="menu-complete">
+        <div class="menu">
+            <a class="logo" href="./../html/index.html">
+                <img class="logo__img" src="./../imgs/logo-senku.svg" alt="Logo de senku education">
+            </a>
+            <i class="menu__icon button__url fa-solid fa-bars"></i>
+            <nav class="menu__navbar">
+                <a class="navbar__a" href="./../html/index.html"> Inicio </a>
+                <a class="navbar__a" href="./../html/temas.html"> Temas </a>
+                <a class="navbar__a active" href="./../html/juegos.html"> Juegos </a>
+                <a class="navbar__a button__url" href="#Descarga"> Descarga </a>
+            </nav>
+        </div>
+    </div>
+
+    <header class="header-temas-complete">
+        <div class="header-temas container">
+            <div class="header__background"></div>
+            <h1 class="header-temas__h1"> JUEGOS </h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="juegos-cards-complete" id="cardsContainer">
+            <div class="juegos-cards container">
+                <div class="card">
+                    <div class="card__imgContent">
+                        <img src="./../imgs/senku-sim-1.png" alt="" class="card__img">
+                    </div>
+                    <div class="card__txt">
+                        <h2 class="card__title">
+                            Movimiento Rectilíneo Uniforme
+                        </h2>
+                        <a href="./../html/juegos.html#juego" class="card__button"
+                            onclick="openGame(event, 'MOVRUjuego')">
+                            Jugar
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__imgContent">
+                        <img src="./../imgs/senku-sim-2.png" alt="" class="card__img">
+                    </div>
+                    <div class="card__txt">
+                        <h2 class="card__title">
+                            Caída libre
+                        </h2>
+                        <a href="./../html/juegos.html#juego" class="card__button"
+                            onclick="openGame(event, 'CAIDLIBjuego')">
+                            Jugar
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__imgContent">
+                        <img src="./../imgs/senku-sim-3.png" alt="Simulacion de analisis dimensional" class="card__img">
+                    </div>
+                    <div class="card__txt">
+                        <h2 class="card__title">
+                            Análisis Dimensional
+                        </h2>
+                        <a href="./../html/juegos.html#juego" class="card__button"
+                            onclick="openGame(event, 'ANADIMjuego')">
+                            Jugar
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__imgContent">
+                        <img src="./../imgs/senku-sim-4.png" alt="Simulacion de hidrostática" class="card__img">
+                    </div>
+                    <div class="card__txt">
+                        <h2 class="card__title">
+                            Hidroestática
+                        </h2>
+                        <a href="./../html/juegos.html#juego" class="card__button"
+                            onclick="openGame(event, 'HIDROESTjuego')">
+                            Jugar
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__imgContent">
+                        <img src="./../imgs/senku-simulaciones-5.png" alt="Simulacion de hidrodinámica"
+                            class="card__img">
+                    </div>
+                    <div class="card__txt">
+                        <h2 class="card__title">
+                            Hidrodinámica <br>
+                            <span> Próximamente </span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="juego"></div>
+
+        <div id="MOVRUjuego" class="juego">
+            <iframe class="juego__iframe" src="https://i.simmer.io/@KenpachiZaraki/mru">
+                Su navegador no soporta iframe
+            </iframe>
+            <button class="juego__minScreenBtn" onclick="exitFullScreen('MOVRUjuego')">
+                <i class="fa-solid fa-compress"></i>
+            </button>
+            <button class="juego__fullScreenBtn" onclick="showFullScreen('MOVRUjuego')">
+                <i class="fa-solid fa-expand"></i>
+            </button>
+            <div class="creditos">
+                <p class="creditos__p"> Movimiento Rectilíneo Uniforme </p>
+                <br>
+                <span class="creditos__span">
+                    &#169; SENKU Education
+                </span>
+            </div>
+        </div>
+
+        <div id="CAIDLIBjuego" class="juego">
+            <iframe class="juego__iframe" src="https://i.simmer.io/@KenpachiZaraki/caida-libre"></iframe>
+            <button class="juego__minScreenBtn" onclick="exitFullScreen('CAIDLIBjuego')">
+                <i class="fa-solid fa-compress"></i>
+            </button>
+            <button class="juego__fullScreenBtn" onclick="showFullScreen('CAIDLIBjuego')">
+                <i class="fa-solid fa-expand"></i>
+            </button>
+            <div class="creditos">
+                <p class="creditos__p"> Caída Libre </p>
+                <br>
+                <span class="creditos__span">
+                    &#169; SENKU Education
+                </span>
+            </div>
+        </div>
+
+        <div id="ANADIMjuego" class="juego">
+            <div class="juego__iframe">
+                <div id="game-board"></div>
+                <div class="game__buttons">
+                    <span id="win-msg" class="hidden"> ¡Ganaste! </span>
+                    <button class="game-buttons" id="reset-button">
+                        <i class="fa-solid fa-arrow-rotate-left"></i>
+                    </button>
+                    <p style="color: #ffffff50; line-height: 0;"> Niveles </p>
+                    <hr style="width: 80%; height: 1px; border: none; background: #ffffff50;">
+                    <button class="game-buttons" id="level1-button"> 1 </button>
+                    <button class="game-buttons" id="level2-button"> 2 </button>
+                </div>
+            </div>
+
+            <button class="juego__minScreenBtn" onclick="exitFullScreen('ANADIMjuego')">
+                <i class="fa-solid fa-compress"></i>
+            </button>
+            <button class="juego__fullScreenBtn" onclick="showFullScreen('ANADIMjuego')">
+                <i class="fa-solid fa-expand"></i>
+            </button>
+            <div class="creditos">
+                <p class="creditos__p"> Análisis Dimensional </p>
+                <br>
+                <span class="creditos__span">
+                    &#169; SENKU Education
+                </span>
+            </div>
+        </div>
+
+        <div id="HIDROESTjuego" class="juego">
+            <iframe class="juego__iframe" src="https://i.simmer.io/@KenpachiZaraki/hidrostatica"></iframe>
+            <button class="juego__minScreenBtn" onclick="exitFullScreen('HIDROESTjuego')">
+                <i class="fa-solid fa-compress"></i>
+            </button>
+            <button class="juego__fullScreenBtn" onclick="showFullScreen('HIDROESTjuego')">
+                <i class="fa-solid fa-expand"></i>
+            </button>
+            <div class="creditos">
+                <p class="creditos__p"> Hidroestática </p>
+                <br>
+                <span class="creditos__span">
+                    &#169; SENKU Education
+                </span>
+            </div>
+        </div>
+
+        <section class="convertidor-complete">
+            <article class="convertidor container">
+                <div class="convertidor__txt">
+                    <h3 class="convertidor__title"> <span> Convertidor </span>
+                        <br> de unidades
+                    </h3>
+                    <p>
+                        Una herramienta de gran ayuda para todos los estudiantes, donde podrás descubrir la magia de las
+                        conversiones, así como también mejorar tus habilidades matemáticas y la importancia que tiene en
+                        nuestra vida cotidiana. Se enfoca en el tiempo, longitud y la combinación entre ambos
+                        <b>¡Comienza ya!</b>
+                    </p>
+                </div>
+                <div class="convertidor__content">
+                    <select id="typeUnit">
+                        <option value="length">Longitud</option>
+                        <option value="time">Tiempo</option>
+                        <option value="speed">Velocidad</option>
+                    </select>
+                    <div class="convertidor__space">
+                        <input type="number" id="inputValue" placeholder="0.00">
+                        <select id="inputUnit"></select>
+                        <p> = </p>
+                        <input type="number" id="resultValue" placeholder="0.00">
+                        <select id="outputUnit"></select>
+                    </div>
+                    <div class="convertidor__formula__txt">
+                        <p> Fórmula </p>
+                        <label id="conversionDescription"></label>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <div id="Descarga" class="descarga-complete">
+        <div class="descarga container">
+            <div class="descarga__cards">
+                <div class="descarga__card">
+                    <p class="card__p"> ¿Qué es </p>
+                    <p class="card__p">SENKU</p>
+                    <p class="card__p">CALCULATOR?</p>
+                </div>
+                <div class="descarga__card">
+                    <p class="card__p"> Tu compañero perfecto para resolver problemas de física de manera
+                        <b class="card__b">rápida y eficiente</b>.
+                    </p>
+                    <br>
+                    <p class="card__p"> Con una <b class="card__b">interfaz intuitiva</b> y
+                        <b class="card__b">funciones poderosas</b>, SENKU Calculator te ayuda a dominar
+                        algunos conceptos básicos de la asignatura de Física
+                    </p>
+                </div>
+                <div class="descarga__card">
+                    <p> 03 <span class="card__b">Calculadoras</span> interactivas disponibles </p>
+                    <img class="descarga__img" src="./../imgs/senku-calculator-2.png" alt="Temas de SENKU Calculator">
+                </div>
+                <div class="descarga__card">
+                    <p class="descarga__p"> Temas del curso de <span class="descarga__b">Física I</span> </p>
+                    <p class="descarga__p"> Movimiento Rectilíneo Uniforme </p>
+                    <p class="descarga__p"> Caída Libre </p>
+                    <p class="descarga__p"> Análisis Dimensional </p>
+                </div>
+                <div class="descarga__card">
+                    <img class="descarga__img" src="./../imgs/senku-calculator-3.png" alt="">
+                    <img class="descarga__img" src="./../imgs/senku-calculator-1.png" alt="">
+                </div>
+                <div class="descarga__card">
+                    <p class="card__p">
+                        ¿Cómo descargar <span class="card__b">SENKU Calculator?</span>
+                    </p>
+                    <p class="card__p">
+                        Descargar y descompirmir el archivo <code class="code">Instalador_SENKU_Calculator</code>
+                    </p>
+                    <p class="card__p">
+                        Ingresar en la carpeta <code class="code">Release</code>
+                    </p>
+                    <p class="card__p">
+                        Ejecutar el <code class="code">InstaladorSENKU</code>
+                    </p>
+                </div>
+            </div>
+            <span class="alert">
+                <i class="alert__icon fa-solid fa-triangle-exclamation"></i>
+                No disponible para dispositivos móviles.
+            </span>
+            <a class="descarga__a button__url-border" href="./../Instalador_SENKU_Calculator.zip"
+                download="Instalador_SENKU_Calculator">
+                Descargar SENKU Calculator
+                <i class="header__i button__url fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <footer class="footer-complete">
+        <div class="footer">
+            <p class="footer__txt">
+                SENKU Education &#169; <span id="actualizarCopy"></span> | Todos los derechos reservados
+            </p>
+            <div class="socialmedia">
+                <a href="https://www.tiktok.com/@senkucalculator?is_from_webapp=1&sender_device=pc" target="_blank">
+                    <i class="socialmedia__icon fa-brands fa-tiktok"></i>
+                </a>
+                <a href="https://instagram.com/senku_calculator?igshid=NGVhN2U2NjQ0Yg==" target="_blank">
+                    <i class="socialmedia__icon fa-brands fa-square-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61551761022302" target="_blank">
+                    <i class="socialmedia__icon fa-brands fa-square-facebook"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./../js/index.js"></script>
+    <script src="./../js/juegos.js"></script>
+    <script src="./../js/analisisDim.js"></script>
+    <script src="./../js/convertidor.js"></script>
+
+</body>
+
+</html>

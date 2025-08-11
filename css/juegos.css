@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.header-temas-complete {
+    --gradient-dark-blue: linear-gradient(to bottom, #1E3146, #161B22);
+    background: var(--gradient-dark-blue);
+    padding-block: 150px 100px;
+}
+
+.header-temas__h1 {
+    text-align: center;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: clamp(1.875rem, 0.2841rem + 7.9545vw, 6.25rem);
+    color: var(--clr-brands-950);
+    mix-blend-mode: lighten;
+    text-shadow: 1px 0 var(--clr-principal),
+        -1px 0 var(--clr-principal),
+        0 1px var(--clr-principal),
+        0 -1px var(--clr-principal);
+    letter-spacing: 10px;
+}
+
+.juegos-cards-complete {
+    padding-inline: 25px;
+    padding-block: 100px;
+}
+
+.juegos-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+}
+
+.card {
+    display: block;
+    width: min(270px, 100%);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid var(--clr-brands-500);
+    --r-gradient-a: radial-gradient(circle at 0% 0%,
+            #1E3146, #1a2431, #161B22);
+    background: var(--r-gradient-a);
+    aspect-ratio: 1;
+    transition: .3s ease-in-out all;
+
+    &:hover {
+        box-shadow: 0 0 15px var(--clr-brands-800);
+        border: 2px solid white;
+    }
+
+    &:hover .card__img {
+        scale: 1.05;
+    }
+
+    &:nth-child(5) .card__title {
+        line-height: 1;
+
+        & span {
+            color: var(--clr-brands-500);
+            font-size: var(--fnt-size-xs);
+            font-weight: 500;
+        }
+    }
+}
+
+.card__imgContent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card__img {
+    width: 105%;
+    transition: .3s ease-in all;
+}
+
+.card__txt {
+    width: 100%;
+    transition: .3s ease-in-out all;
+    height: 70px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__title {
+    text-align: center;
+    line-height: 25px;
+    font-size: var(--fnt-size-s);
+    font-weight: 300;
+    padding-inline: 10px;
+}
+
+.card__button {
+    position: absolute;
+    margin-block-start: 5px;
+    background: var(--clr-brands-800);
+    font-family: var(--fnt-normal);
+    color: var(--clr-principal);
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 10px;
+    top: 65px;
+    left: 0;
+    transition: .3s ease-in-out all;
+
+    &:hover {
+        background-color: var(--clr-brands-900);
+    }
+}
+
+#juego {
+    height: 100px;
+}
+
+.juego {
+    display: none;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto 50px;
+    height: auto;
+}
+
+.juego.active {
+    position: fixed;
+    z-index: 999999;
+    padding-block: 25px;
+    left: 0;
+    top: 0;
+    max-width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.juego__minScreenBtn {
+    display: none;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+
+    font-size: var(--fnt-size-m);
+    color: var(--clr-brands-500);
+    border: 1px solid var(--clr-brands-500);
+    padding: 5px 7px 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: transparent;
+    transition: .3s ease-in-out background;
+
+    &:hover {
+        background: var(--r-gradient-a);
+    }
+
+    &:active {
+        scale: 0.9;
+    }
+}
+
+.juego.active .juego__minScreenBtn {
+    display: block;
+}
+
+.juego__iframe {
+    width: calc(100% - 50px);
+    height: 100%;
+    aspect-ratio: 11 / 7;
+    margin-inline: 25px;
+    border-radius: 7px;
+    box-shadow: 0 0 35px #253D55;
+}
+
+.juego__iframe.active {
+    max-width: 90%;
+    max-height: 100%;
+}
+
+.juego__fullScreenBtn {
+    float: right;
+    margin-block: 50px;
+    margin-inline-end: 25px;
+    font-size: var(--fnt-size-m);
+    color: var(--clr-brands-500);
+    border: 1px solid var(--clr-brands-500);
+    padding: 5px 7px 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: transparent;
+    transition: .3s ease-in-out background;
+
+    &:hover {
+        background: var(--r-gradient-a);
+    }
+
+    &:active {
+        scale: 0.9;
+    }
+}
+
+.creditos {
+    margin-block-start: 25px;
+    border-block-start: 1px solid var(--clr-brands-500);
+    padding: 25px;
+}
+
+.creditos__p {
+    font-size: var(--fnt-size-m);
+}
+
+.creditos__span {
+    color: var(--clr-brands-500);
+}
+
+.convertidor {
+    display: flex;
+}
+
+.convertidor__txt,
+.convertidor__content {
+    padding-block: 50px;
+}
+
+.convertidor__txt {
+    border-right: 1px solid var(--clr-brands-800);
+    width: 40%;
+}
+
+.convertidor__txt>.convertidor__title {
+    font-size: var(--fnt-size-l);
+    font-weight: 400;
+    line-height: 1;
+    margin-block-end: 20px;
+}
+
+.convertidor__txt>.convertidor__title span {
+    color: var(--clr-principal);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.convertidor__txt>p {
+    width: 90%;
+    text-wrap: pretty;
+
+    &>b {
+        color: var(--clr-principal);
+        font-weight: 600;
+    }
+}
+
+.convertidor__content {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: stretch;
+    justify-content: center;
+    padding-inline-start: 30px;
+}
+
+.convertidor__content>select:nth-child(1) {
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: none;
+    color: var(--clr-brands-950);
+    font-family: var(--fnt-normal);
+    outline: none;
+}
+
+.convertidor__space {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto-fill, 1fr));
+    grid-template-rows: repeat(2, minmax(auto-fill, 1fr));
+
+    &>input:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    &>select:nth-child(1) {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    & p {
+        grid-column: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-block-start: -10px;
+    }
+
+    &>input:nth-child(2) {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    &>select:nth-child(2) {
+        grid-column: 3;
+        grid-row: 2;
+    }
+}
+
+.convertidor__space>:where(input, select) {
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: none;
+    color: var(--clr-brands-950);
+    font-family: var(--fnt-normal);
+    outline: none;
+}
+
+.convertidor__space>input[type="number"] {
+    font-size: var(--fnt-size-l);
+    border-bottom: 4px solid var(--clr-yellow);
+    margin-bottom: 10px;
+
+    &:nth-child(1) {
+        border-bottom: 4px solid var(--clr-blue);
+    }
+}
+
+.convertidor__space>p {
+    text-align: center;
+    font-size: 30px;
+    margin-inline: 8px;
+}
+
+.convertidor__formula__txt {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.convertidor__formula__txt>p {
+    background: var(--clr-yellow);
+    padding: 3px 5px;
+    color: var(--clr-brands-950);
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.convertidor__formula__txt>label {
+    color: var(--clr-brands-500);
+}
+
+@media (max-width: 767px) and (orientation: portrait) {
+    .juego__iframe {
+        width: 100%;
+        margin: 0;
+    }
+
+    .juego__minScreenBtn {
+        right: 5px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    #ANADIMjuego>.juego__iframe {
+        align-items: center;
+    }
+
+    #ANADIMjuego #game-board {
+        grid-template-rows: repeat(4, minmax(auto, 100px));
+        grid-gap: 10px;
+        padding: 10px;
+    }
+
+    .convertidor__formula__txt {
+        justify-content: center;
+    }
+
+
+    .convertidor {
+        flex-direction: column;
+    }
+
+    .convertidor__txt,
+    .convertidor__content {
+        width: 100%;
+        padding-inline: 0;
+    }
+
+    .convertidor__txt {
+        text-align: center;
+        border-right: none;
+        border-bottom: 1px solid var(--clr-brands-800);
+        padding-inline-end: 0;
+    }
+
+    .convertidor__txt>p {
+        width: 100%;
+    }
+}
+
+/* Simulacion de analisis dimensional - Memory Card Game */
+
+#ANADIMjuego>.juego__iframe {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10px;
+    border: 1px solid white;
+    background: #0E2B47;
+    aspect-ratio: 11 / 7;
+    text-align: center;
+    line-height: 1;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+#ANADIMjuego #game-board {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(auto, 300px));
+    grid-gap: 10px;
+    padding: 20px;
+    overflow: hidden;
+    justify-content: right;
+    width: 100%;
+    aspect-ratio: 11 / 7;
+}
+
+#ANADIMjuego .card {
+    width: 100%;
+    max-height: 100%;
+    background: #509FF1;
+    background-image: url('./../imgs/logo-senku-icon-white.svg');
+    background-repeat: no-repeat;
+    background-size: 35%;
+    background-position: center center;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 3px;
+    font-size: clamp(0.5rem, 0.1471rem + 1.7647vw, 1.25rem);
+}
+
+#win-msg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    margin-block-start: 20px;
+    margin-inline-end: 15px;
+    font-size: 10px;
+    color: #F3BB1A;
+    font-family: "Press Start 2P", system-ui;
+}
+
+.hidden {
+    display: none;
+}
+
+#ANADIMjuego .card.flipped {
+    background: #fff;
+    color: #1a2431;
+}
+
+#ANADIMjuego .card.matched {
+    background: lightgreen;
+    color: #1a2431;
+}
+
+.game__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 15px;
+    min-width: 100px;
+    width: 10%;
+}
+
+#ANADIMjuego .game-buttons {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s ease-in-out all;
+    color: #fff;
+    background: transparent;
+    width: 80%;
+    height: auto;
+    font-family: "Press Start 2P", system-ui;
+    font-size: clamp(0.625rem, 0.4432rem + 0.9091vw, 1.125rem);
+
+    &:hover {
+        background: #ffffff10;
+    }
+
+    &:active,
+    &:focus {
+        background: #509FF1;
+        color: #fff;
+    }
+}
